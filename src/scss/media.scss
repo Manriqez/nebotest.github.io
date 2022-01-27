@@ -1,0 +1,97 @@
+@media (max-width: 1201px) {
+    .card {
+        .sides-block-wrapper {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+			row-gap: 1rem;
+            justify-content: center;
+			justify-items: center;
+        }
+        &-left-block, &-right-block {
+            position: static;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .card {
+        width: 95%;
+        &-title {
+            font-size: 22px;
+        }
+        &-subtitle {
+            font-size: 16px;
+        }
+        &-center-block {
+            .step-graph {
+                width: 85%;
+                margin: 0 auto;
+            }
+            &__content {
+                .slide {
+                    &__title {
+                        h2 {
+                            font-size: 20px;
+                        }
+                    }
+                    &-wrapper {
+                        margin: 0 auto;
+                        width: 95%;
+                        text-align: center;
+                    }
+                    &[data-slide='1'] {
+                        display: inline-grid;
+                        grid-template-columns: repeat(2, 1fr);   
+                    }
+                    &[data-slide='3'] {
+                        display: inline-grid;
+                        grid-template-columns: repeat(1, 1fr);   
+                    }
+
+                }
+                .navigate-buttons {
+                    margin-top: 20px;
+                }
+            }
+        }
+        .sides-block-wrapper {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media (max-width: 481px) {
+    .card {
+        &-title {
+            h2 {
+                font-size: 18px;
+            }
+        }
+        &-subtitle {
+            font-size: 14px;
+        }
+        &-center-block {
+            &__content {
+                .slide {
+                    &__title {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .navigate-buttons {
+        flex-direction: column;
+        max-width: 160px;
+        margin: 0 auto;
+        .btn.prev {
+            margin-right: 0!important;
+            margin-bottom: 20px;
+        }
+    }
+}
