@@ -143,6 +143,8 @@ button {
 						}
 						img {
 							width: 150px;
+							height: 120px;
+							border-radius: 10px;
 						}
 						&__title {
 							font-size: 12px;
@@ -234,6 +236,7 @@ button {
 			margin-bottom: 30px;
 			&--item {
 				display: flex;
+				align-items: center;
 				&:not(:last-child) {
 					margin-bottom: 25px;
 				}
@@ -303,8 +306,8 @@ button {
 				}
 				text-align: right;
 				&-img {
-					max-width: 200px;
-					max-height: 240px;
+					width: 200px;
+					height: 240px;
 					transform: translateY(4px);
 				}
 			}
