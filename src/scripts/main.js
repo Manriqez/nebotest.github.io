@@ -75,18 +75,21 @@ $(function(){
         renderSteps(currentStep)
     })
 
+    function takeStep() {
+        return 
+    }
+
     $('.next').on('click', function() {
-
-        var checkmark = document.querySelector('svg');
-        var className = "animate";
-
+        let checkmark = $('svg')
         let stepElem = $('span[data-step]')
-        let currentStep = stepElem.attr('data-step')
-        if(currentStep == 6) {
+        let currentStep = $('span[data-step]').attr('data-step')
 
-            if (!checkmark.classList.contains(className)) {
-              checkmark.classList.add(className);
-            } 
+        if(currentStep == 6) {
+            
+            // checkmark animate
+            if (!checkmark.hasClass('animate')) {
+              checkmark.addClass('animate')
+            }
             
             $('button.next').css('display', 'none')
             $('button.prev').css('display', 'none')
